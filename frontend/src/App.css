@@ -27,12 +27,18 @@ h1.title {
 
   padding-bottom: 25px;
 }
+/* 
+.form-row div {
+  display: flex;
+  flex-direction: column;
+} */
+
+
 
 /* PartnerTile */
-
-.partner-tile {
+/* .partner-tile {
   width: 450px;
-  height: 400px;
+  height: 450px;
 
   display: flex;
   flex-direction: column;
@@ -41,15 +47,134 @@ h1.title {
 
   border: 1px solid #3d3d3d;
   border-radius: 12px;
+  padding: 25px;
+} */
 
+.partner-tile {
+  width: 450px;
+  height: 450px;
+  perspective: 1000px;
+  position: relative;
+}
+
+.front, .back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform 0.6s;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid #3d3d3d;
+  border-radius: 12px;
   padding: 25px;
 }
 
+.front {
+  z-index: 2;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.partner-tile.flipped .front {
+  transform: rotateY(180deg);
+}
+
+.partner-tile.flipped .back {
+  transform: rotateY(0);
+}
+
+
+
+
 .partner-thumbnail {
   max-width: 330px;
-  max-height: 150px;
+  max-height: 135px;
 }
 
 .partner-info {
   font-size: 0.9em;
+}
+
+.partner-info button{
+  background-color:rgba(255, 0, 0, 1);
+  color:#fff
+}
+
+.partner-thumbnail {
+  transition: transform 0.3s ease;
+}
+
+.partner-thumbnail:hover {
+  transform: scale(1.05); /* Increase the size by 10% */
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Modal */
+.modal {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center; /* Center text */
+}
+
+/* Close button */
+.close-button {
+  background-color: #353535;
+  color: #fff;
+  border: none;
+  padding: 10px 0; /* Adjust padding */
+  border-radius: 5px;
+  cursor: pointer;
+  width: 25%; /* Make button occupy full width */
+}
+
+/* Close button on hover */
+/* .modal button:hover {
+  background-color: #353535;
+} */
+
+
+/* Add this CSS to your existing stylesheet */
+
+.form-field {
+  margin-bottom: 20px; /* Add some bottom margin to separate form fields */
+}
+
+.form-field label {
+  display: block; /* Make the label a block-level element */
+  margin-bottom: 5px; /* Add some bottom margin to separate label and input */
+}
+
+.form-field input,
+.form-field textarea {
+  width: 50%; /* Make the input fields and textarea fill the entire width of their container */
+}
+
+.form-field select {
+  width: 10%; /* Set a specific width for the select element */
+}
+
+
+.form-field button{
+  background-color:rgba(24, 126, 24, 0.703);
+  color:#fff
 }
