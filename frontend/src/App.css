@@ -27,29 +27,8 @@ h1.title {
 
   padding-bottom: 25px;
 }
-/* 
-.form-row div {
-  display: flex;
-  flex-direction: column;
-} */
-
-
 
 /* PartnerTile */
-/* .partner-tile {
-  width: 450px;
-  height: 450px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  border: 1px solid #3d3d3d;
-  border-radius: 12px;
-  padding: 25px;
-} */
-
 .partner-tile {
   width: 450px;
   height: 450px;
@@ -89,8 +68,6 @@ h1.title {
 .partner-tile.flipped .back {
   transform: rotateY(0);
 }
-
-
 
 
 .partner-thumbnail {
@@ -141,10 +118,10 @@ h1.title {
   background-color: #353535;
   color: #fff;
   border: none;
-  padding: 10px 0; /* Adjust padding */
+  padding: 10px 0; 
   border-radius: 5px;
   cursor: pointer;
-  width: 25%; /* Make button occupy full width */
+  width: 25%; /* Make button occupy 25% width */
 }
 
 /* Close button on hover */
@@ -153,26 +130,25 @@ h1.title {
 } */
 
 
-/* Add this CSS to your existing stylesheet */
 
+/* Form */
 .form-field {
-  margin-bottom: 20px; /* Add some bottom margin to separate form fields */
+  margin-bottom: 20px; 
 }
 
 .form-field label {
-  display: block; /* Make the label a block-level element */
-  margin-bottom: 5px; /* Add some bottom margin to separate label and input */
+  display: block; 
+  margin-bottom: 5px; 
 }
 
 .form-field input,
 .form-field textarea {
-  width: 50%; /* Make the input fields and textarea fill the entire width of their container */
+  width: 50%; 
 }
 
 .form-field select {
-  width: 10%; /* Set a specific width for the select element */
+  width: 10%; 
 }
-
 
 .form-field button{
   background-color:rgba(24, 126, 24, 0.703);
